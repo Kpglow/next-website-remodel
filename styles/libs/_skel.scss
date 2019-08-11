@@ -366,15 +366,15 @@
 			}
 
 		// Reset.
-			$x: map-get($config, 'reset');
+			// $x: map-get($config, 'reset');
 
-			@if $x {
+			// @if $x {
 
-				/* Reset */
+			// 	/* Reset */
 
-				@include reset($x);
+			// 	@include reset($x);
 
-			}
+			// }
 
 		// Box model.
 			$x: map-get($config, 'boxModel');

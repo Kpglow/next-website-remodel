@@ -24,8 +24,7 @@ class Main extends React.Component {
         <article id="work" className={`${this.props.article === 'work' ? 'active' : ''} ${this.props.articleTimeout ? 'timeout' : ''}`} style={{display:'none'}}>
           <h2 className="major">Work</h2>
           <span className="image main"><img src="/static/images/pic02.jpg" alt="" /></span>
-          <p>Adipiscing magna sed dolor elit. Praesent eleifend dignissim arcu, at eleifend sapien imperdiet ac. Aliquam erat volutpat. Praesent urna nisi, fringila lorem et vehicula lacinia quam. Integer sollicitudin mauris nec lorem luctus ultrices.</p>
-          <p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus pharetra. Pellentesque condimentum sem. In efficitur ligula tate urna. Maecenas laoreet massa vel lacinia pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus amet feugiat tempus.</p>
+          <p>After graduating Ucsc with a Bachelors of Arts degree in Computer Science, I've been on a mission to dive deep into React Programming.</p>
           {close}
         </article>
 
@@ -49,15 +48,15 @@ class Main extends React.Component {
             </div>
             <div className="field">
               <label htmlFor="message">Message</label>
-              <textarea name="message" id="message" rows="4"></textarea>
+              <textarea name="message" id="message" rows="4" onChange={this.props.onChange} value={this.props.value}></textarea>
             </div>
             <ul className="actions">
-              <li><input type="submit" value="Send Message" className="special" /></li>
+              <li><input type="reset" value="Send Message" onClick={this.props.onSubmit}/></li>
               <li><input type="reset" value="Reset" /></li>
             </ul>
           </form>
           <ul className="icons">
-            <li><a href="#">
+            {/* <li><a href="#">
               <FontAwesomeIcon icon={faTwitter} />
             </a></li>
             <li><a href="#">
@@ -65,8 +64,8 @@ class Main extends React.Component {
             </a></li>
             <li><a href="#">
               <FontAwesomeIcon icon={faInstagram} />
-            </a></li>
-            <li><a href="#">
+            </a></li> */}
+            <li><a href="https://github.com/kpglow">
               <FontAwesomeIcon icon={faGithub} />
             </a></li>
           </ul>
@@ -83,7 +82,10 @@ Main.propTypes = {
   article: PropTypes.string,
   articleTimeout: PropTypes.bool,
   onCloseArticle: PropTypes.func,
-  timeout: PropTypes.bool
+  timeout: PropTypes.bool,
+  onSubmit: PropTypes.func,
+  onChange: PropTypes.func,
+  value: PropTypes.string
 }
 
 export default Main

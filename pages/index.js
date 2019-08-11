@@ -13,10 +13,13 @@ class IndexPage extends React.Component {
             timeout: false,
             articleTimeout: false,
             article: "",
-            loading: "is-loading"
+            loading: "is-loading",  
+            value: ''
         }
         this.handleOpenArticle = this.handleOpenArticle.bind(this)
         this.handleCloseArticle = this.handleCloseArticle.bind(this)
+        this.handleSubmit = this.handleSubmit.bind(this);
+        this.handleChange = this.handleChange.bind(this);
     }
 
     componentDidMount() {
@@ -30,6 +33,14 @@ class IndexPage extends React.Component {
             clearTimeout(this.timeoutId)
         }
     }
+    handleChange(event) {
+        this.setState({value: event.target.value});
+      }
+
+    handleSubmit(event) {
+        alert("Message Sent!");
+        this.setState({value: ""});
+      }
 
     handleOpenArticle(article) {
         this.setState({
@@ -87,6 +98,9 @@ class IndexPage extends React.Component {
                             articleTimeout={this.state.articleTimeout}
                             article={this.state.article}
                             onCloseArticle={this.handleCloseArticle}
+                            onSubmit={this.handleSubmit}
+                            onChange={this.handleChange}
+                
                         />
                         <Footer timeout={this.state.timeout} />
                     </div>
