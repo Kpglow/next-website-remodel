@@ -40,16 +40,17 @@ class IndexPage extends React.Component {
       }
 
     handleSubmit(event) {
+        let body_message = this.state.value
         $(document).ready(function(){
             $.ajax({
                 url: API_URL,
-                method: 'Post',
-                data: {
-                  message: "Test"
+                type: 'Post',
+                data: JSON.stringify({"message": body_message}),
+                contentType: "application/json",
+                success: function(err, res, body) {
+                    alert("message sent!")
                 }
-              }, function(err, res, body) {
-                  alert("message sent!")
-              });
+              },);
         })
 
         this.setState({value: ""});
