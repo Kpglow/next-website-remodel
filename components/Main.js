@@ -1,11 +1,12 @@
 import PropTypes from 'prop-types';
 import FontAwesomeIcon from '@fortawesome/react-fontawesome'
-import faTwitter from '@fortawesome/fontawesome-free-brands/faTwitter'
-import faFacebook from '@fortawesome/fontawesome-free-brands/faFacebook'
+// import faTwitter from '@fortawesome/fontawesome-free-brands/faTwitter'
+// import faFacebook from '@fortawesome/fontawesome-free-brands/faFacebook'
 import faInstagram from '@fortawesome/fontawesome-free-brands/faInstagram'
 import faGithub from '@fortawesome/fontawesome-free-brands/faGithub'
 
 class Main extends React.Component {
+  
   render() {
 
     let close = <div className="close" onClick={() => {this.props.onCloseArticle()}}></div>
@@ -23,15 +24,37 @@ class Main extends React.Component {
 
         <article id="work" className={`${this.props.article === 'work' ? 'active' : ''} ${this.props.articleTimeout ? 'timeout' : ''}`} style={{display:'none'}}>
           <h2 className="major">Work</h2>
-          <span className="image main"><img src="/static/images/pic02.jpg" alt="" /></span>
-          <p>After graduating Ucsc with a Bachelors of Arts degree in Computer Science, I've been on a mission to dive deep into React Programming.</p>
+          <span className="image main"><img src="/static/images/banner.png" alt="" /></span>
+          <p> During my time at the University of California Santa Cruz, I've developed many professional applications using React to provide rich and intuitive user interfaces.  </p> 
+          <a href="https://www.instagram.com/shareyourselfartists/">
+              <FontAwesomeIcon icon={faInstagram} />
+            </a>
+            <b> Share Yourself Artists  </b>
+            <br></br> Summer 2018, Role: Backend-developer
+            <ul> 
+            <li>Create scalable cloud solutions that made sense for several client projects</li>
+            <li> Work with a variety of frameworks such as React, Nodejs, and Vuejs. </li>
+            <li> Communicate with web-designers, clients, and a team of software engineers on a daily basis. </li>
+            </ul>
+           
           {close}
         </article>
 
         <article id="about" className={`${this.props.article === 'about' ? 'active' : ''} ${this.props.articleTimeout ? 'timeout' : ''}`} style={{display:'none'}}>
           <h2 className="major">About</h2>
-          <span className="image main"><img src="/static/images/pic03.jpg" alt="" /></span>
-          <p>Lorem ipsum dolor sit amet, consectetur et adipiscing elit. Praesent eleifend dignissim arcu, at eleifend sapien imperdiet ac. Aliquam erat volutpat. Praesent urna nisi, fringila lorem et vehicula lacinia quam. Integer sollicitudin mauris nec lorem luctus ultrices. Aliquam libero et malesuada fames ac ante ipsum primis in faucibus. Cras viverra ligula sit amet ex mollis mattis lorem ipsum dolor sit amet.</p>
+          <div style={{verticalAlign:'top',display:'inline-block'}}>
+          <img src="/static/images/profile-pic.jfif" alt="" style={{width: 200,height: 200, resizeMode: 'contain'}}/>
+          </div>
+          <div style={{display:'inline-block', paddingLeft:25}}>
+            <div> My name is Karl, and I'm a software engineer.</div>
+            <div> After graduating Ucsc with a Bachelors of Arts </div>
+            <div> degree in Computer Science, I've been on a mission</div>
+            <div> to dive deeper into React Programming.</div>
+            <br></br>
+            <div> I'm currently working on several side-projects. </div>
+            <div> If you have freelance projects, leave me a message</div>
+            <div> here or via email directly @ karlwng@gmail.com</div>
+          </div>
           {close}
         </article>
 
@@ -56,15 +79,6 @@ class Main extends React.Component {
             </ul>
           </form>
           <ul className="icons">
-            {/* <li><a href="#">
-              <FontAwesomeIcon icon={faTwitter} />
-            </a></li>
-            <li><a href="#">
-              <FontAwesomeIcon icon={faFacebook} />
-            </a></li>
-            <li><a href="#">
-              <FontAwesomeIcon icon={faInstagram} />
-            </a></li> */}
             <li><a href="https://github.com/kpglow">
               <FontAwesomeIcon icon={faGithub} />
             </a></li>
