@@ -1,11 +1,9 @@
 const path = require('path')
 const glob = require('glob')
 
-
 module.exports = {
   
   webpack: (config, { dev }) => {
-
     config.module.rules.push(
       {
         test: /\.(css|scss)/,
@@ -35,7 +33,9 @@ module.exports = {
     )
     return config
   },
-
+  env: {
+    AWS_URL: process.env.AWS_URL
+  }
   // exportPathMap: function(defaultPathMap) {
   //   return {
   //     '/': { page: '/' }
