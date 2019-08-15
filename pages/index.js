@@ -27,6 +27,7 @@ class IndexPage extends React.Component {
     }
 
     componentDidMount() {
+        alert(API_URL)
         this.timeoutId = setTimeout(() => {
             this.setState({ loading: "" })
         }, 100)
