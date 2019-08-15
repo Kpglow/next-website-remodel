@@ -4,7 +4,9 @@ import $ from 'jquery';
 import Header from "../components/Header"
 import Main from "../components/Main"
 import Footer from "../components/Footer"
-
+import getConfig from 'next/config'
+// Only holds serverRuntimeConfig and publicRuntimeConfig from next.config.js nothing else.
+const { serverRuntimeConfig, publicRuntimeConfig } = getConfig()
 // const AWS = require('aws-sdk')
 // var request = require('ajax-request')
 
@@ -27,7 +29,7 @@ class IndexPage extends React.Component {
     }
 
     componentDidMount() {
-        alert(API_URL)
+        alert(publicRuntimeConfig.AWS_URL)
         this.timeoutId = setTimeout(() => {
             this.setState({ loading: "" })
         }, 100)

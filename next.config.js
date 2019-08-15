@@ -33,9 +33,10 @@ module.exports = {
     )
     return config
   },
-  env: {
-    AWS_URL: process.env.AWS_URL
-  }
+  publicRuntimeConfig: {
+    // Will be available on both server and client
+    AWS_URL: process.env.AWS_URL,
+  },
   // exportPathMap: function(defaultPathMap) {
   //   return {
   //     '/': { page: '/' }
