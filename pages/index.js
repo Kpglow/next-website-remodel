@@ -4,9 +4,11 @@ import $ from 'jquery';
 import Header from "../components/Header"
 import Main from "../components/Main"
 import Footer from "../components/Footer"
+
 // const AWS = require('aws-sdk')
 // var request = require('ajax-request')
-const API_URL = "https://047v9b78b2.execute-api.us-west-2.amazonaws.com/prod/SimpleEmailApi"
+
+const API_URL = process.env.AWS_URL
 class IndexPage extends React.Component {
     constructor(props) {
         super(props)
