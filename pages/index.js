@@ -10,7 +10,7 @@ const { serverRuntimeConfig, publicRuntimeConfig } = getConfig()
 // const AWS = require('aws-sdk')
 // var request = require('ajax-request')
 
-const API_URL = process.env.AWS_URL
+const API_URL = publicRuntimeConfig.AWS_URL
 class IndexPage extends React.Component {
     constructor(props) {
         super(props)
@@ -29,7 +29,6 @@ class IndexPage extends React.Component {
     }
 
     componentDidMount() {
-        alert(publicRuntimeConfig.AWS_URL)
         this.timeoutId = setTimeout(() => {
             this.setState({ loading: "" })
         }, 100)
