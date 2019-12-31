@@ -37,7 +37,7 @@ class Main extends React.Component {
             <li> Work with a variety of frameworks such as React, Nodejs, and Vuejs. </li>
             <li> Communicate with web-designers, clients, and a team of software engineers on a daily basis. </li>
             </ul>
-          <h2 style={{borderBottom: '1px solid #000', paddingBottom: '3px', borderColor:'white', width: '75%'}}>Current Projects</h2>
+          <h2 style={{borderBottom: '1px solid #000', paddingBottom: '3px', borderColor:'white', width: '61%'}}>Current Projects</h2>
           <span className="image main"><img src="/static/images/dim-sum-banner.jpg" alt="" /></span>
           <p> A minimalistic full-stack project that will drive up sales and lower third-party costs for my uncle's bakery / takeout in San Francisco. </p> 
           <a href="https://nameless-depths-86272.herokuapp.com/">
