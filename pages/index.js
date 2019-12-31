@@ -49,7 +49,7 @@ class IndexPage extends React.Component {
             $.ajax({
                 url: API_URL,
                 type: 'Post',
-                data: JSON.stringify({"message": body_message}),
+                data: JSON.stringify({"message": {text: body_message, email: "karlwng@gmail.com"}}),
                 contentType: "application/json",
                 success: function(err, res, body) {
                     alert("message sent!")
