@@ -4,7 +4,7 @@ To get started, simply clone the repository and run `npm install`
 
 ```
 # Clone the repo
-git clone https://github.com/codebushi/nextjs-starter-dimension.git
+git clone https://github.com/Kpglow/next-website-remodel.git
 
 # Move into the new directory
 cd nextjs-starter-dimension/
