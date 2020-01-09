@@ -28,8 +28,11 @@ class Main extends React.Component {
           <p> During my time at the University of California Santa Cruz, I've developed many professional applications using React to provide rich and intuitive user interfaces.  </p> 
           <a href="https://www.instagram.com/shareyourselfartists/">
               <FontAwesomeIcon icon={faInstagram} />
-            </a>
+          </a>
+          {" "}
+          <a href="https://sya-app.firebaseapp.com/">
             <b> Share Yourself Artists  </b>
+          </a>
             <br></br> <i>Full Stack Developer</i> 
             <br></br>June 2018 - June 2019
             <ul> 
