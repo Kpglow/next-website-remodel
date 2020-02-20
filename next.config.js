@@ -17,6 +17,17 @@ module.exports = {
         use: ['babel-loader', 'raw-loader', 'postcss-loader']
       },
       {
+        test: /\.(png|svg|jpg|gif|pdf)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[name].[ext]'
+            }
+          }
+        ]
+      },
+      {
         test: /\.s(a|c)ss$/,
         use: ['babel-loader', 'raw-loader', 'postcss-loader',
           { loader: 'sass-loader',

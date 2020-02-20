@@ -69,6 +69,7 @@ class Main extends React.Component {
             <div> I'm currently working on several side-projects. </div>
             <div> If you have freelance projects, leave me a message</div>
             <div> here or via email directly @ karlwng@gmail.com</div>
+            <a href={'https://drive.google.com/file/d/1UiBqJONiCGpqrl1gg47HNFqQS7E6mu4f/view?usp=sharing'}>My Resume</a>
           </div>
           {close}
         </article>
