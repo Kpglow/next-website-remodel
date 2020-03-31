@@ -32,7 +32,7 @@
     "jquery": "^3.4.1",
     "mandrill-api": "^1.0.45",
     "net": "^1.0.2",
-    "next": "^7.0.0",
+    "next": "^9.3.3",
     "node-mandrill": "^1.0.1",
     "node-sass": "^4.9.3",
     "nodemailer": "^6.3.0",
