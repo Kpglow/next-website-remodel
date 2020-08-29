@@ -11,6 +11,7 @@ const Header = (props) => (
         <div className="content">
             <div className="inner">
                 <h1>Karl Wong</h1>
+                <p className="quote">“Try not to become a man of success, but rather become a man of value.” – Albert Einstein</p>
                 <p>Find me on <a href="https://github.com/kpglow">Github</a> or <br />
                 <a href="https://linkedin.com/karl-wong-ucsc">Linkedin</a></p>
             </div>
